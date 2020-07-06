@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Flight;
 //use App\Destination;
 use App\User;
+use App\Scopes\AgeScope;
+use Illuminate\Database\Eloquent\Builder;
 
 /*
 |--------------------------------------------------------------------------
@@ -391,4 +393,43 @@ use App\User;
 //    $flight_two->save();
 //});
 
+/* Query Scopes - Global Scopes */
+/* Table: users [id  Primary  int(11)  AUTO_INCREMENT, name  varchar(200), age  int(11)] */
+//Route::get('/', function () {
+//    $users = User::all();
+//    return $users;
+
+//    $users = User::withoutGlobalScope(AgeScope::class)->get();
+//    return $users;
+
+//    $users = User::withoutGlobalScope('age')->get();
+//    return $users;
+
+    // Remove all of the global scopes...
+//    $users = User::withoutGlobalScopes()->get();
+//    return $users;
+
+    // Remove some of the global scopes...
+//    $users = User::withoutGlobalScopes([
+//        AgeScope::class,  // FirstScope::class, SecondScope::class
+//    ])->get();
+//    return $users;
+//});
+
+/* Query Scopes - Local Scopes */
+//Route::get('/', function () {
+//    $users = User::popular()->active()->orderBy('created_at')->get();
+//    return $users;
+
+//    $users = User::popular()->orWhere(function (Builder $query) {
+//        $query->active();
+//    })->get();
+//    return $users;
+
+//    $users = User::popular()->orWhere->active()->get();
+//    return $users;
+
+//    $users = User::ofType('admin')->get();
+//    return $users;
+//});
 
