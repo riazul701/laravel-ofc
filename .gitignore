@@ -1,3 +1,8 @@
+# Database Synchronization
+_database_sync/*
+!_database_sync/.gitkeep
+dbackup-config.php
+
 /node_modules
 /public/hot
 /public/storage
